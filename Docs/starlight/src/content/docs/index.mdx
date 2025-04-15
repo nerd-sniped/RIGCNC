@@ -3,30 +3,27 @@ title: Welcome to the RIGCNC Project Docs
 description: Stick with us while we build this site.
 template: splash
 hero:
-  tagline: Excuse the mess while the site is being built!
+  tagline: Grab the open-source plans for a seriously capable machine you build yourself. This site's still under construction, so pardon the mess while you explore!
   image:
     file: ../../assets/houston.webp
   actions:
-    - text: Click Me if You're New Here!
-      link: /guides/example/
+    - text: Get Started!
+      link: /guides/welcome/
       icon: right-arrow
 ---
 
 import { Card, CardGrid } from '@astrojs/starlight/components';
+import { LinkCard } from '@astrojs/starlight/components';
 
 ## Next steps
 
 <CardGrid stagger>
-	<Card title="Update content" icon="pencil">
-		Edit `src/content/docs/index.mdx` to see this page change.
-	</Card>
-	<Card title="Add new content" icon="add-document">
-		Add Markdown or MDX files to `src/content/docs` to create new pages.
-	</Card>
-	<Card title="Configure your site" icon="setting">
-		Edit your `sidebar` and other config in `astro.config.mjs`.
-	</Card>
-	<Card title="Read the docs" icon="open-book">
-		Learn more in [the Starlight Docs](https://starlight.astro.build/).
-	</Card>
+	<LinkCard title="Start Your Build" href="/guides/welcome" description="Ready to make some sparks (figuratively!)? Follow our step-by-step guide to get your build going.">
+	</LinkCard>
+	<LinkCard title="The Shopping List (BOM)" icon="add-document" href="/reference/bom/" description="Check out the detailed list of parts you'll need to hunt down for your build">
+	</LinkCard>
+	<LinkCard title="Chat with Builders" icon="discord" href="https://discord.gg/gqbpDNPKsQ" description="Jump into our Discord to ask questions, share your progress, and connect with fellow RIGCNC makers.">
+	</LinkCard>
+	<LinkCard title="Design Philosophy" icon="download" href="/theory/designinsights/" description="Curious about the design choices? Dive into the reasoning behind RIGCNC's structure and components.">
+	</LinkCard>
 </CardGrid>

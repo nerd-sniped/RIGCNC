@@ -1,5 +1,5 @@
 ---
-title: Example Reference
+title: Wiring Diagrams
 description: A reference page in my new Starlight docs site.
 ---
 

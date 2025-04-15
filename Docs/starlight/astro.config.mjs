@@ -11,16 +11,28 @@ export default defineConfig({
 			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/nerd-sniped/RIGCNC' }],
 			sidebar: [
 				{
-					label: 'Getting Started',
+					label: 'Start Here',
 					items: [
-						// Each item here is one entry in the navigation menu.
-						{ label: 'Example Guide', slug: 'guides/example' },
+						{ label: 'Welcome', slug: 'guides/welcome' },
+						{ label: 'Capabilities', slug: 'guides/capabilities' },
+						{ label: 'Design Decisions', slug: 'guides/designdecisions' },
+						{ label: 'Usage & Workflow', slug: 'guides/usageandworkflow' },
 					],
+
+				},
+				{
+					label: 'How-To',
+					autogenerate: { directory: 'howto' },
 				},
 				{
 					label: 'Reference',
 					autogenerate: { directory: 'reference' },
 				},
+				{
+					label: 'Theory',
+					autogenerate: { directory: 'theory' },
+				},
+
 			],
 		}),
 	],
