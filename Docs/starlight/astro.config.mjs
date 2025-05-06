@@ -16,13 +16,16 @@ export default defineConfig({
 						{ label: 'Welcome', slug: 'guides/welcome' },
 						{ label: 'Capabilities', slug: 'guides/capabilities' },
 						{ label: 'Design Decisions', slug: 'guides/designdecisions' },
-						{ label: 'Usage & Workflow', slug: 'guides/usageandworkflow' },
 					],
 
 				},
 				{
 					label: 'How-To',
-					autogenerate: { directory: 'howto' },
+					items: [
+						{label: 'Build & Assembly', slug: 'howto/buildandassembly'},
+						{label: 'Usage & Workflow', slug: 'howto/usageandworkflow'},
+						{label: 'Troubleshooting', slug: 'howto/troubleshooting'},
+					],
 				},
 				{
 					label: 'Reference',
