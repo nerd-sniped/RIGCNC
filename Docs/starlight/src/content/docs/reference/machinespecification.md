@@ -3,9 +3,6 @@ title: Machine Specification
 description: A reference page in my new Starlight docs site.
 ---
 
-Reference pages are ideal for outlining how things work in terse and clear terms.
-Less concerned with telling a story or addressing a specific use case, they should give a comprehensive outline of what you're documenting.
+Oops, still working on this part, join the discord and poke me to get to it.... OR write this section and send it my way :D
 
-## Further reading
-
-- Read [about reference](https://diataxis.fr/reference/) in the Diátaxis framework
+[Link to the discord](https://discord.gg/gqbpDNPKsQ)
