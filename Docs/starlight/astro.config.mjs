@@ -35,6 +35,10 @@ export default defineConfig({
 					label: 'Theory',
 					autogenerate: { directory: 'theory' },
 				},
+				{
+					label: 'Archive',
+					autogenerate: { directory: 'archive' },
+				},
 
 			],
 		}),
