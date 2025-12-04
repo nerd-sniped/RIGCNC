@@ -2,52 +2,46 @@
 title: Archived RIGCNC Site
 description: This is the Markdown Copy of the OLD version of the website (Pre 2024)
 ---
-Check out the most up to Date Project details on the Github!
-
-Sections
-Theory of Construction-Long and Nerdy
-Research
-Design/CAD
-Build
-Results
-Project Summary
-This is still a work in progress, check back for updates periodically.
+Check out the most up to Date Project details on the [Github!](https://github.com/nerd-sniped/RIGCNC)
 
 The overall goal of the project was to put together a passably rigid and inexpensive CNC mill capable of taking fairly heavy cuts (by maker standards) with minimal prerequisite machine tools(for assembly) while still being small and portable** The finished project can be completed with a good quality hand drill and a 3D printer.  The conception of the project began when I realized you can buy "A" grade granite surface plates as well as precision steel right angles for less than $250. This gives a precision rigid base with a vertical section similar to a VMC.
 
 **By portable I mean moveable without rigging.  I live in a NYC apartment, I wanted a mill I could disassemble, put in my car and move somewhere.   The final mill is ~200 lbs. but breaks down into a few pieces that are 80lbs or less.
 
-Goals/Requirements
+### Goals/Requirements
+
 The design of RIGCNC machine was created with a design principle I learned about from the guys over at machine agency(go check out thet Jubilee 3D printer , its awesome), they call it fabricatability.   They explained it quite well on the Jubilee Printer page.  below is an exerpt from their github page.
 
-the design should be reproducible in single quantities without relying on high volume purchases
+- the design should be reproducible in single quantities without relying on high volume purchases
 
-the constituent components should be broadly accessible to an international audience
+- the constituent components should be broadly accessible to an international audience
 
-the design should present all necessary trade-specific knowledge up-front via documentation
+- the design should present all necessary trade-specific knowledge up-front via documentation
 
-the design should be reproducible with commonly available unspecialized fabrication equipment
+- the design should be reproducible with commonly available unspecialized fabrication equipment
 
-the design should maximize compatibility with generic stock parts where possible
+- the design should maximize compatibility with generic stock parts where possible
 
-Think of it as a specific flavor of design-for-manufacturing where the manufacturer is a single person, someone who may not have access to milling and turning machines or the knowledge of how to use them. This person also shouldn't need the fine motor skills of an experienced craftsperson to assemble parts.
+- Think of it as a specific flavor of design-for-manufacturing where the manufacturer is a single person, someone who may not have access to milling and turning machines or the knowledge of how to use them. This person also shouldn't need the fine motor skills of an experienced craftsperson to assemble parts.
 
 I think this just beautifully summarizes the design decisions I tried to make.  The goal was to purchase rigidity and precision where possible.
 
-1. Theory of Construction-Long and Nerdy
+## Theory of Construction-Long and Nerdy
+
 The following section is long and nerdy. the TL;DR is:
 
-Everything is a spring, keep things in either tension or compression to keep it rigid and strong
+- Everything is a spring, keep things in either tension or compression to keep it rigid and strong
 
-Short Load Paths ensure the most efficient use of your materials. If you can support your loads where they occur the machine will be much more rigid.
+- Short Load Paths ensure the most efficient use of your materials. If you can support your loads where they occur the machine will be much more rigid.
 
-Material selection can be a factor, you can use mass to your advantage. Especially when vibrations and damping are considerations. Increasing the Inertia (mass) of the cutting assembly will make it want to move less. This is especially beneficial when considering tool chatter.
+- Material selection can be a factor, you can use mass to your advantage. Especially when vibrations and damping are considerations. Increasing the Inertia (mass) of the cutting assembly will make it want to move less. This is especially beneficial when considering tool chatter.
 
-Precision components are only useful if they are properly constrained
+- Precision components are only useful if they are properly constrained
 
-Precision components are only as precise as your least precise component in your precision "chain"
+- Precision components are only as precise as your least precise component in your precision "chain"
 
-Design philosophy
+### Design philosophy
+
 The goal of this build was to purchase rigidity and precision when applicable. A mill has to do two things to be useful; Accurately place the head of the mill at a prescribed location (relative to a work piece) and keep it there while it is being acted on by external forces (cutting forces). Rigidity is key to both of these goals. There is no downside to having a rigid machine.
 
 The following article should read as various thoughts one should have in mind while pondering/building a mill. I break many of the rules of design while building my mill, (hopefully) for defensible monetary or convenience reasons. When building a hobby-grade mill certain concessions have to be made. I am going to do my best to use qualitative language instead of jumping right into numbers, the goal here is to convey insight and not preach.
@@ -56,31 +50,34 @@ Most mills in this price point (<$1500) are not rigid.  This is often due to poo
 
 The goal of this design is to cut small parts, out of steel or aluminum. Spindle speed will be slow and have good torque for large(ish) endmills.  This is in contrast to most hobby mills out there that use Chinese spindles.  These typically operate at much higher RPM and need very tiny endmills to run effectively. (I do plan on adding a high-speed spindle to the head eventually) A high-speed spindle and a low-speed spindle have complementary strengths and weaknesses.
 
-Broad summary of how a mill works;
+### Broad summary of how a mill works
+
 A mill removes material from "stock" to create a part. This is done by spinning a tool (often a sharp blade shaped like a helix) against the stock to cut small pieces away. [It's important to note that the material is being CUT not abraded away]
 
 Removing this material from the stock exerts a reaction force on the end mill.  Newton's Third Law... This force travels through the components of the assembly taking the path of least resistance, similar to electricity.
 
 This path is called the load path (the path the load takes... 10/10 for engineering naming creativity).  As the load travels through the assembly, each of the components in the loading path receives some portion of the load, deflect a small amount, and pass the remaining load onto the next component. How much each component deflects, and consequently how rigid a machine is, is determined by geometry (in the context of the full machine) and the material.  Typically the smaller the component (at least in cross-sectional area) the more it will deform, if it deforms too much it breaks.  A rigid machine will usually have short load paths and use rigid materials with large cross-sections of material in high load areas.
 
-Lets talk about mill (or machine) design.
+#### Lets talk about mill (or machine) design.
+
 A mill (as described above) needs to predictably move a end mill around while being acted on by external forces. This boils down to a rigidity requirement. More rigid = more better.
 
 To make something rigid, typically there are two high level parameters to manipulate.
 
-Material
+**Material**
 
-Geometry
+**Geometry**
 
-A well-designed mill will intelligently mix the two and use them together to achieve the desired goal.
+*A well-designed mill will intelligently mix the two and use them together to achieve the desired goal.*
 
-Now lets talk material(s)
+### Now lets talk material(s)
+
 A fundamental truth of the universe that needs special attention when designing machines is EVERYTHING is a spring.  When a force is applied to an object, the object pushes back. The act of the object pushing back is actually the object deforming and storing potential energy.  when a small force is applied to an object it will bend, when the force is removed it returns to its original shape. This is called elastic deformation, in the elastic deformation range, materials follow Hooks Law (IE they behave and can be modeled like a classic spring).  Each material has an upper limit to the amount of energy it is capable of storing before it begins to deform, surpassing this "limit" will cause the material to deform permanently.  This is called plastic deformation.
 
 Plastic deformation almost always means the part has been "broken". A permanent change from the designed shape is rarely a design feature (unless the design is meant to absorb impact or high forces in which case the design is 1-time use) Plastic deformation is also an indicator that the force is approaching the yield strength of the material, this is the point at which a material actually begins to break apart.  Every material behaves differently and this is often shown in a stress vs. Strain graph (Engineers LOVE graphs).  Some materials have large elastic deformation ranges, some materials have very small or short elastic ranges. This is how we quantify the material differences between for example rubber and steel.
 
+![Stress-strain](../../../assets/RIGCNC/Stress+Strain.webp)
 
-Stress Strain.PNG
 In the above graph, Blue is a hard brittle material, red is a strong semi ductile material, Yellow is a ductile material that bends a lot, green is a "plastic" material meaning it bends quickly but remains flexible and is difficult to break.  The point at which the graph ends is where the material will break.
 
 When designing for rigidity, the goal is to minimize the amount of deflection that occurs, in other words, minimize the amount of elastic deformation that is experienced. This typically means picking a rigid material (Blue/Red lines above) and using a sufficient amount of the material to resist the expected force.  An example of a rigid design is a laboratory microscope. These are often built from a large metal casting and would probably withstand having a car parked on top of them. The large amount of material is present to make the microscope sufficiently stiff (low on its elastic deformation range) to take very small measurements.

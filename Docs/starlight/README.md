@@ -1,4 +1,4 @@
-# RIGCNC Project Docuementation Website
+# RIGCNC Project Documentation Website
 
 Truth be told, you're not really supposed to be seeing this. It's on an open source project repo so you're more than welcome to poke around.
 But looking at the code is not the best user experience. So, if you want to see the docs in action, head over to [rigcnc.com](https://rigcnc.com) and check it out.
